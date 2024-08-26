@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONEL PLEASE I WANNA WORK ON THE SITE</title>
+    <style>
+        .circle {
+            width: 50px;
+            height: 50px;
+            border: 2px solid transparent;
+            border-radius: 50%;
+            position: absolute;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            transition: border 0.3s ease;
+        }
+
+        .circle.color {
+            background-color: #FF00FF;
+        }
+
+        .circle:hover {
+            border: 3px solid green;
+        }
+
+        .text {
+            position: absolute;
+            font-size: 16px;
+            color: black;
+        }
+
+        .additional-text {
+            position: absolute;
+            font-size: 16px;
+            color: black;
+        }
+
+        .square {
+            width: 160px;
+            height: 160px;
+            position: absolute;
+            border-radius: 10px;
+            overflow: hidden;
+            z-index: 0;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            transition: all 0.3s ease;
+        }
+
+        .square.active {
+            width: 200px;
+            height: 170px;
+            border: 3px solid darkgreen;
+            z-index: 1;
+        }
+
+        .focusable {
+            outline: 4px solid transparent;
+            transition: outline-color 0.3s ease;
+        }
+
+        .focusable:focus {
+            outline-color: #00FF00;
+        }
+
+        .square:hover {
+            width: 200px;
+            height: 170px;
+            border: 3px solid darkgreen;
+            z-index: 1;
+        }
+
+        .text-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            text-align: center;
+            padding: 5px 0;
+            font-size: 14px;
+            border-radius: 0 0 10px 10px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 2;
+        }
+
+        .square:hover .text-overlay {
+            opacity: 1;
+        }
+
+        .icon-circle {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background-color: black;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: border 0.3s ease;
+        }
+
+        .icon-circle:hover {
+            border: 3px solid green;
+        }
+
+        .new-circle {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            position: absolute;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            transition: transform 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+        }
+
+        .new-circle:hover {
+            transform: scale(1.1);
+        }
+
+        .new-circle svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .hover-effect {
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .hover-effect:hover {
+            transform: scale(1.1);
+            background-color: #333;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 1; /* Ensure it's above the background but below text-overlay */
+        }
+
+        .square:hover .overlay {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="circle img-circle" style="left: 15px; top: 200px; background-image: url('your-image.jpg');"></div>
+
+    <div class="circle color" style="left: 15px; top: 10px;"></div>
+
+    <b class="text" style="left: 75px; top: 25px;">SneakyCopHead</b>
+
+    <div class="additional-text" style="left: 75px; top: 50px;">G 21,284</div>
+
+    <div class="icon-circle hover-effect" style="left: 570px; top: 10px;">
+        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="10" y="12" width="12" height="40" rx="2" fill="white" />
+            <rect x="28" y="12" width="12" height="40" rx="2" fill="white" />
+        </svg>
+    </div>
+
+    <div class="icon-circle hover-effect" style="left: 650px; top: 10px;">
+        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="10" y="16" width="44" height="36" rx="2" fill="white" />
+            <rect x="16" y="12" width="4" height="8" fill="white" />
+            <rect x="44" y="12" width="4" height="8" fill="white" />
+        </svg>
+    </div>
+
+    <div class="new-circle hover-effect" style="left: 730px; top: 10px;">
+        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="12" y="22" width="40" height="20" fill="white" />
+            <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial" font-size="8" fill="black">GAME PASS</text>
+        </svg>
+    </div>
+
+    <div class="icon-circle hover-effect" style="left: 810px; top: 10px;">
+        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M32 22L36 24L38 28L42 28L44 32L42 36L38 38L36 42L32 44L28 42L26 38L22 36L20 32L22 28L26 28L28 24L32 22Z" stroke="white" stroke-width="3" fill="none" />
+            <circle cx="48" cy="16" r="6" fill="green" />
+        </svg>
+    </div>
+
+    <div class="square focusable" tabindex="1" style="left: 50px; top: 350px; background-image: url('game1.jpg');">
+        <div class="overlay" style="background-image: url('game1-hover.jpg');"></div>
+        <div class="text-overlay">Sea of Thieves</div>
+    </div>
+    <div class="square focusable" tabindex="2" style="left: 257px; top: 350px; background-image: url('Mario.jpg');">
+        <div class="overlay" style="background-image: url('Mario-hover.jpg');"></div>
+        <div class="text-overlay">Mario</div>
+    </div>
+    <div class="square focusable" tabindex="3" style="left: 462px; top: 350px; background-image: url('game2.jpg');">
+        <div class="overlay" style="background-image: url('game2-hover.jpg');"></div>
+        <div class="text-overlay">Call of Duty</div>
+    </div>
+    <div class="square focusable" tabindex="4" style="left: 667px; top: 350px; background-image: url('game3.jpg');">
+        <div class="overlay" style="background-image: url('game3-hover.jpg');"></div>
+        <div class="text-overlay">Borderlands 2</div>
+    </div>
+    <div class="square focusable" tabindex="5" style="left: 872px; top: 350px; background-image: url('game4.jpg');">
+        <div class="overlay" style="background-image: url('background4.jpg');"></div>
+        <div class="text-overlay">Fortnite</div>
+    </div>
+    <div class="square focusable" tabindex="6" style="left: 1077px; top: 350px; background-image: url('game5.jpg');">
+        <div class="overlay" style="background-image: url('game5-hover.jpg');"></div>
+        <div class="text-overlay">Minecraft</div>
+    </div>
+</body>
+
+</html>
